@@ -1,6 +1,12 @@
 Descrição
 Este projeto  é uma API desenvolvida para o controle de estoque, permitindo o gerenciamento do cadastro de produtos e fornecedores. O projeto foi construído com ASP.NET Core 8 e utiliza Entity Framework para manipulação do banco de dados, seguindo os princípios de DDD (Domain-Driven Design), SOLID e Injeção de Dependência. 
 
+Pré-requisitos
+Para executar este projeto, você precisará do seguinte:
+
+Visual Studio 2022 com .NET 8 instalado.
+Um banco de dados SQL Server. Você precisará criar um banco de dados local e atualizar a string de conexão no arquivo SqlServerSettings.cs.
+
 Tecnologias Utilizadas
 
 ASP.NET Core 8 API: Framework principal para o desenvolvimento da API.
