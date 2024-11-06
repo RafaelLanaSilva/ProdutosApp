@@ -12,13 +12,13 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
-builder.Services.AddRouting(map => { map.LowercaseUrls = true; });
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddAutoMapper(typeof(ProfileMap));
+builder.Services.AddRouting(map => { map.LowercaseUrls = true; });
 
 
 //dependency injection for the project's interfaces/classes
@@ -36,7 +36,6 @@ builder.Services.AddCors(
                .AllowAnyHeader();
     })
 );
-
 //Consumer class
 builder.Services.AddHostedService<RabbitMQConsumer>();
 

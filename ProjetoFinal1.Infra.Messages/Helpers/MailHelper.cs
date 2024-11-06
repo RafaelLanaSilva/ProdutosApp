@@ -13,10 +13,10 @@ namespace ProjetoFinal1.Infra.Messages.Helpers
     {
         #region Attributes
 
-        private static string _account = "rafaellanas@gmail.com";
+        private static string _account = "sergiojavaarq@outlook.com";
         private static string _password = "@Admin12345";
-        private static string _smtp = "smtp.gmail.com";
-        private static int _door = 465;
+        private static string _smtp = "smtp-mail.outlook.com";
+        private static int _door = 587;
 
         #endregion
 

@@ -42,14 +42,14 @@ namespace ProjetoFinal1.Domain.Services
             if (_supplierRepository.GetById(supplierId) == null)
                 throw new ApplicationException("Fornecedor não encontrado");
 
-            _productRepository.Add(product);    
+            _productRepository.Add(product);           
 
             //Sending the email
             var emailServiceModel = new EmailServiceModel
             {
                 EmailReceiver = "rafaellanas@gmail.com",
                 Subject = "Novo produto cadastrado no sistema",
-                Message = "Olá! \nO produto foi cadastrado com sucesso!"
+                Message = $"Olá! \nO produto {product.Name} foi cadastrado com sucesso!"
             };
             _messageProducer.Send(JsonConvert.SerializeObject(emailServiceModel));
 
